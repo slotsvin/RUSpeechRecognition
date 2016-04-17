@@ -1,4 +1,4 @@
-from dragonfly.all import Grammar, CompoundRule, Dictation
+from dragonfly import *
 import pythoncom
 import time
 import win32com.client
@@ -7,6 +7,7 @@ speaker = win32com.client.Dispatch("SAPI.SpVoice")
 
 
 # Voice command rule combining spoken form and recognition processing.
+# For testing purposes
 class Greeting(CompoundRule):
 	spec = "hello"                 # Spoken form of command.
 
